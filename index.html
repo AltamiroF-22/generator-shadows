@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d77a2ed1ab.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="./images/pngwing.com.png">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Gerador de Box-Shadow</title>
+</head>
+<body>
+    <div id="box-shadow-generator">
+        <div id="controls-container">
+            <h2>Configurações da Box-Shadow:</h2>
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="spread">Curva (Radius):</label>
+                    <input type="range"
+                       id="radius" 
+                       name="radius"
+                       min="0"
+                       max="50"
+                       value="50">
+                </div>
+                <div class="reference-input">
+                    <div  id="radius-value" name="radius-value"></div>
+                    <span>%</span>
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="horizontal">Deslocamento horizontal:</label>
+                    <input type="range"
+                       id="horizontal" 
+                       name="horizontal"
+                       min="-100"
+                       max="100"
+                       value="100">
+                </div>
+                <div class="reference-input">
+                    <div id="horizontal-value" name="horizontal-value"></div>
+                    <span>px</span>
+                </div>
+            </div>
+            <!-- -------------------------vertical------------------------------ -->
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="vertical">Deslocamento vertical:</label>
+                    <input type="range"
+                       id="vertical" 
+                       name="vertical"
+                       min="-100"
+                       max="100"
+                       value="-7">
+                </div>
+                <div class="reference-input">
+                    <div id="vertical-value" name="vertical-value"></div>
+                    <span>px</span>
+                </div>
+            </div>
+            <!-- ------------------------blur------------------------------- -->
+
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="blur">Intensidade do (Blur):</label>
+                    <input type="range"
+                       id="blur" 
+                       name="blur"
+                       min="0"
+                       max="100"
+                       value="0">
+                </div>
+                <div class="reference-input">
+                    <div id="blur-value" name="blur-value"></div>
+                    <span>px</span>
+                </div>
+            </div>
+
+            <!-- --------------------spread---------------------------- -->
+
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="spread">Deslocamento (Spread):</label>
+                    <input type="range"
+                       id="spread" 
+                       name="spread"
+                       min="-100"
+                       max="100"
+                       value="-3">
+                </div>
+                <div class="reference-input">
+                    <div  id="spread-value" name="spread-value"></div>
+                    <span>px</span>
+                </div>
+            </div>
+
+       
+            <!-- --------------------color---------------------------- -->
+
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="color">Cor (Color):</label>
+                   
+                       <div class="colors-show">
+                        <input type="color" class="color-input" value="#9900ff" name="color" id="color">
+                        <span>#000000</span>
+                       </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="preview">
+            <h2>Preview do efeito gerado:</h2>
+            <div id="box"></div>
+        </div>
+    </div>
+    
+    <div id="generated-rule">
+
+        <h2>Copie e cole seu arquivo de CSS:</h2>
+       
+        <div class="rule-alert"></div>
+        <div class="arrow"><i class="fa-solid fa-angles-down fa-bounce"></i></div>
+        <div id="rules-area">
+            <p id="rule">box-shadow:<span></span></p>
+            <p id="webkit-rule">-webkit-shadow:<span></span></p>
+            <p id="moz-rule">-moz-box-shadow:<span></span></p>
+            <p id="borderRad">border-radius:<span></span></p>
+        </div>
+       
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
